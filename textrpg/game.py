@@ -147,10 +147,10 @@ zone_map = {
         DESCRIPTION = 'the entrance to the town'
         EXAMINATION = 'examine'
         SOLVED = False
-        UP = 'up', 'north'
-        DOWN = 'down', 'south'
-        LEFT = 'left', 'west'
-        RIGHT = 'right', 'east'
+        UP = 'a1'
+        DOWN = 'c1'
+        LEFT = ''
+        RIGHT = 'b2'
     },
     'b2': {
         ZONENAME: "Home",
