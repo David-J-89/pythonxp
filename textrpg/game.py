@@ -49,8 +49,21 @@ def title_screen():
     os.system('clear')
     print('############################')
     print('# Welcome to the Text RPG! #')
-    print('         - Play -           ')
-    print('         - Help -           ')
-    print('         - Quit -           ')
+    print('~~~~~~~~~- Play -~~~~~~~~~~~')
+    print('~~~~~~~~~- Help -~~~~~~~~~~~')
+    print('~~~~~~~~~- Quit -~~~~~~~~~~~')
     print('   Copyright 2018 davidj    ')
     title_screen_selections()
+
+
+def help_menu():
+    print('############################')
+    print('# Welcome to the Text RPG! #')
+    print('- Use up, down, left, right to move')
+    print('- Type your commands to do them')
+    print('- Use "look" to inspect something')
+    print('- Good luck and have fun!')
+    title_screen_selections()
+
+
+def start_game():
