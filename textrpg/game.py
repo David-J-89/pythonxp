@@ -71,6 +71,7 @@ def help_menu():
 
 def start_game():
 
+
     ##### MAP #####
 """
 a1 a2... # PLAYER STARTS AT b2
@@ -85,6 +86,7 @@ a1 a2... # PLAYER STARTS AT b2
 -------------
 """
 
+ZONENAME = ''
 DESCRIPTION = 'description'
 EXAMINATION = 'examine'
 SOLVED = False
@@ -93,8 +95,162 @@ DOWN = 'down', 'south'
 LEFT = 'left', 'west'
 RIGHT = 'right', 'east'
 
-solved_place = ('a1': False, 'a2': False, 'a3': False, 'a4': False,
+solved_place = {'a1': False, 'a2': False, 'a3': False, 'a4': False,
                 'b1': False, 'b2': False, 'b3': False, 'b4': False,
                 'c1': False, 'c2': False, 'c3': False, 'c4': False,
                 'd1': False, 'd2': False, 'd3': False, 'd4': False,
-                )
+                }
+
+zone_map = {
+    'a1': {
+        ZONENAME: "TOWN A1",
+        DESCRIPTION = ''
+        EXAMINATION = 'examine'
+        SOLVED = False
+        UP = ''
+        DOWN = 'b1'
+        LEFT = ''
+        RIGHT = 'a2'
+    },
+    'a2': {
+        ZONENAME: "Town Entrance",
+        DESCRIPTION = 'the entrance to the town'
+        EXAMINATION = 'examine'
+        SOLVED = False
+        UP = ''
+        DOWN = 'b2'
+        LEFT = 'a1'
+        RIGHT = 'a3'
+    },
+    'a3': {
+        ZONENAME: "Town Square",
+        DESCRIPTION = 'the central meeting place of the town'
+        EXAMINATION = 'examine'
+        SOLVED = False
+        UP = ''
+        DOWN = 'b3'
+        LEFT = 'a2'
+        RIGHT = 'a4'
+    },
+    'a4': {
+        ZONENAME: "Town Hall",
+        DESCRIPTION = 'government offices in here'
+        EXAMINATION = 'examine'
+        SOLVED = False
+        UP = ''
+        DOWN = 'b4'
+        LEFT = 'a3'
+        RIGHT = ''
+    },
+    'b1': {
+        ZONENAME: "town",
+        DESCRIPTION = 'the entrance to the town'
+        EXAMINATION = 'examine'
+        SOLVED = False
+        UP = 'up', 'north'
+        DOWN = 'down', 'south'
+        LEFT = 'left', 'west'
+        RIGHT = 'right', 'east'
+    },
+    'b2': {
+        ZONENAME: "Home",
+        DESCRIPTION = 'This is your home!'
+        EXAMINATION = 'Your home looks the same - nothing has changed.'
+        SOLVED = False
+        UP = 'a2'
+        DOWN = 'c2'
+        LEFT = 'b1'
+        RIGHT = 'b3'
+    },
+    # 'b3': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'b4': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'c1': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'c2': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'c3': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'c4': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'd1': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'd2': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'd3': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+    # 'd4': {
+    #     ZONENAME: "",
+    #     EXAMINATION = 'examine'
+    #     SOLVED = False
+    #     UP = 'up', 'north'
+    #     DOWN = 'down', 'south'
+    #     LEFT = 'left', 'west'
+    #     RIGHT = 'right', 'east'
+    # },
+
+}
