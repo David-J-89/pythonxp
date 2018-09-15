@@ -71,6 +71,7 @@ def help_menu():
 
 def start_game():
 
+
     ##### MAP #####
 """
 a1 a2... # PLAYER STARTS AT b2
@@ -273,10 +274,29 @@ def prompt():
     while action.lower() not in acceptable_actions:
         print("Unknown actions, try again.\n")
         action = input("> ")
-    if action.lower()
+    if action.lower() == 'quit':
+        sys.exit()
+    elif action.lower() in ['move', 'go', 'travel', 'walk']:
+        player_move(action.lower())
+    elif action.lower() in ['examine', 'inspect', 'interact', 'look']:
+        player_examine(action.lower())
+
+
+def player_move(myAction):
+    ask = "Where would you like to move to?\n"
+    dest = input(ask)
+    if dest in ['up', 'north']:
+        destination = zonemap[myPlayer.location][UP]
+        movement_handler(dest)
+    elif dest in ['left', 'west']:
+    elif dest in ['east', 'right']:
+    elif dest in ['south', 'down']:
+
+
+def movement_handler(destination):
+    destination
+
 
 ##### GAME FUNCTIONALITY #####
-
-
 def start_game():
     return
