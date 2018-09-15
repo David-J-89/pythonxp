@@ -71,7 +71,6 @@ def help_menu():
 
 def start_game():
 
-
     ##### MAP #####
 """
 a1 a2... # PLAYER STARTS AT b2
@@ -287,14 +286,26 @@ def player_move(myAction):
     dest = input(ask)
     if dest in ['up', 'north']:
         destination = zonemap[myPlayer.location][UP]
-        movement_handler(dest)
+        movement_handler(destination)
     elif dest in ['left', 'west']:
+        destination = zonemap[myPlayer.location][LEFT]
+        movement_handler(destination)
     elif dest in ['east', 'right']:
+        destination = zonemap[myPlayer.location][RIGHT]
+        movement_handler(destination)
     elif dest in ['south', 'down']:
+        destination = zonemap[myPlayer.location][DOWN]
+        movement_handler(destination)
 
 
 def movement_handler(destination):
-    destination
+    print("\n" + "You have moved to the " + destination + ".")
+    myPlayer.loction = destination
+    print_location()
+
+
+def player_examine(action):
+    if myPlayer.location
 
 
 ##### GAME FUNCTIONALITY #####
