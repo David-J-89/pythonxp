@@ -16,10 +16,12 @@ screen_width = 100
 class player:
     def __init__(self):
         self.name = ''
+        self.job = ''
         self.hp = 0
         self.mp = 0
         self.status_effects = []
         self.location = 'start'
+        self.game_over = False
 
 
 myPlayer = player()
@@ -305,9 +307,23 @@ def movement_handler(destination):
 
 
 def player_examine(action):
-    if myPlayer.location
+    if zonemap[myPlayer.location][SOLVED]:
+        print("You have already exhausted this zone.")
+    else:
+        print("You can trigger a puzzle here.")
 
 
 ##### GAME FUNCTIONALITY #####
 def start_game():
     return
+
+
+def main_game_loop():
+    while myPlayer.game_over is False:
+    prompt()
+    # here handle if puzzles have been solved, boss defaeated, explored, everything, etc.
+
+
+def
+
+title_screen()
