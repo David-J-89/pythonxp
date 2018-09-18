@@ -324,6 +324,26 @@ def main_game_loop():
     # here handle if puzzles have been solved, boss defaeated, explored, everything, etc.
 
 
-def
+def setup_game():
+    os.system('clear')
+
+    # Name collecting
+    question1 = "Hello, what's your name?\n"
+    for character in question 1:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    player_name = input("> ")
+    myPlayer.name = player_name
+
+    question2 = "Hello, what role do you want to play?\n"
+    for character in question 2:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    player_job = input("> ")
+    myPlayer.name = player_job
+    valid_job = ['warrior', 'mage', 'priest']
+
 
 title_screen()
