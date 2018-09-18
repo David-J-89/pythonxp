@@ -20,7 +20,7 @@ class player:
         self.hp = 0
         self.mp = 0
         self.status_effects = []
-        self.location = 'start'
+        self.location = 'b2'
         self.game_over = False
 
 
@@ -32,7 +32,7 @@ myPlayer = player()
 def title_screen_selections():
     option = input("> ")
     if option.lower() == ("play"):
-        start_game()  # placeholder until written
+        setup_game()  # placeholder until written
     elif option.lower() == ("help"):
         help_menu()
     elif option.lower() == ("quit"):
@@ -41,7 +41,7 @@ def title_screen_selections():
         print("Please enter a valid command.")
         option = input("> ")
         if option.lower() == ("play"):
-            start_game()  # placeholder until written
+            setup_game()  # placeholder until written
         elif option.lower() == ("help"):
             help_menu()
         elif option.lower() == ("quit"):
@@ -74,18 +74,19 @@ def help_menu():
 def start_game():
 
     ##### MAP #####
-"""
-a1 a2... # PLAYER STARTS AT b2
--------------
-|  |  |  |  | a4
--------------
-|  |  |  |  | b4...
--------------
-|  |  |  |  |
--------------
-|  |  |  |  |
--------------
-"""
+    """
+    a1 a2... # PLAYER STARTS AT b2
+    -------------
+    |  |  |  |  | a4
+    -------------
+    |  |  |  |  | b4...
+    -------------
+    |  |  |  |  |
+    -------------
+    |  |  |  |  |
+    -------------
+    """
+
 
 ZONENAME = ''
 DESCRIPTION = 'description'
@@ -102,7 +103,7 @@ solved_place = {'a1': False, 'a2': False, 'a3': False, 'a4': False,
                 'd1': False, 'd2': False, 'd3': False, 'd4': False,
                 }
 
-zone_map = {
+zonemap = {
     'a1': {
         ZONENAME: "Town Market",
         DESCRIPTION: 'description',
@@ -262,7 +263,7 @@ zone_map = {
 def print_location():
     print('\n' + ('#' * (4 + len(myPlayer.location))))
     print('# ' + myPlayer.location.upper() + ' #')
-    print('# ' + zonemap[myPlayer.position][DESCRIPTION] + ' #')
+    print('# ' + zonemap[myPlayer.location][DESCRIPTION] + ' #')
     print('\n' + ('#' * (4 + len(myPlayer.location))))
 
 
@@ -302,7 +303,7 @@ def player_move(myAction):
 
 def movement_handler(destination):
     print("\n" + "You have moved to the " + destination + ".")
-    myPlayer.loction = destination
+    myPlayer.location = destination
     print_location()
 
 
@@ -314,14 +315,12 @@ def player_examine(action):
 
 
 ##### GAME FUNCTIONALITY #####
-def start_game():
-    return
 
 
 def main_game_loop():
     while myPlayer.game_over is False:
-    prompt()
-    # here handle if puzzles have been solved, boss defaeated, explored, everything, etc.
+        prompt()
+        #   here handle if puzzles have been solved, boss defaeated, explored, everything, etc.
 
 
 def setup_game():
@@ -329,7 +328,7 @@ def setup_game():
 
     # Name collecting
     question1 = "Hello, what's your name?\n"
-    for character in question 1:
+    for character in question1:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
@@ -339,7 +338,7 @@ def setup_game():
     ### Job handling ###
     question2 = "Hello, what role do you want to play?\n"
     question2added = "(You can play as a warrior, priest, or mage)\n"
-    for character in question 2:
+    for character in question2:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
@@ -348,7 +347,7 @@ def setup_game():
         sys.stdout.flush()
         time.sleep(0.01)
     player_job = input("> ")
-    valid_job = ['warrior', 'mage', 'priest']
+    valid_jobs = ['warrior', 'mage', 'priest']
     if player_job.lower() in valid_jobs:
         myPlayer.job = player_job
         print("You are now a " + player_job + "!\n")
@@ -371,17 +370,15 @@ def setup_game():
 
     # Introduction
     question3 = "Welcome, " + player_name + " the " + player_job + ".\n"
-    for character in question 3:
+    for character in question3:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
-    player_name = input("> ")
-    myPlayer.name = player_name
 
-    speech1 = "Welcome to this fantasy world!"
-    speech2 = "I hope it greets you well!"
-    speech3 = "Just make sure you don't get too lost..."
-    speech4 = "Heheheh..."
+    speech1 = "Welcome to this fantasy world!\n"
+    speech2 = "I hope it greets you well!\n"
+    speech3 = "Just make sure you don't get too lost...\n"
+    speech4 = "Heheheh...\n"
     for character in speech1:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -399,7 +396,7 @@ def setup_game():
         sys.stdout.flush()
         time.sleep(0.2)
 
-    os.syste('clear')
+    os.system('clear')
     print("######################")
     print("#~~Let's start now!~~#")
     print("######################")
