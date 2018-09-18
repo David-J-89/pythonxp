@@ -73,7 +73,6 @@ def help_menu():
 
 def start_game():
 
-
     ##### MAP #####
 """
 a1 a2... # PLAYER STARTS AT b2
@@ -369,6 +368,42 @@ def setup_game():
     elif myPlayer.job is 'priest':
         self.hp = 60
         self.mp = 60
+
+    # Introduction
+    question3 = "Welcome, " + player_name + " the " + player_job".\n"
+    for character in question 3:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    player_name = input("> ")
+    myPlayer.name = player_name
+
+    speech1 = "Welcome to this fantasy world!"
+    speech2 = "I hope it greets you well!"
+    speech3 = "Just make sure you don't get too lost..."
+    speech4 = "Heheheh..."
+    for character in speech1:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.03)
+    for character in speech2:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.03)
+    for character in speech3:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.1)
+    for character in speech4:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.2)
+
+    os.syste('clear')
+    print("######################")
+    print("#~~Let's start now!~~#")
+    print("######################")
+    main_game_loop()
 
 
 title_screen()
