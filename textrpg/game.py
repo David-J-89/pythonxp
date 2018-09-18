@@ -104,64 +104,64 @@ solved_place = {'a1': False, 'a2': False, 'a3': False, 'a4': False,
 
 zone_map = {
     'a1': {
-        ZONENAME: "TOWN A1",
-        DESCRIPTION = ''
-        EXAMINATION = 'examine'
-        SOLVED = False
-        UP = ''
-        DOWN = 'b1'
-        LEFT = ''
-        RIGHT = 'a2'
+        ZONENAME: "Town Market",
+        DESCRIPTION: 'description',
+        EXAMINATION: 'examine',
+        SOLVED: False,
+        UP: '',
+        DOWN: 'b1',
+        LEFT: '',
+        RIGHT: 'a2',
     },
     'a2': {
         ZONENAME: "Town Entrance",
-        DESCRIPTION = 'the entrance to the town'
-        EXAMINATION = 'examine'
-        SOLVED = False
-        UP = ''
-        DOWN = 'b2'
-        LEFT = 'a1'
-        RIGHT = 'a3'
+        DESCRIPTION: 'the entrance to the town',
+        EXAMINATION: 'examine',
+        SOLVED: False,
+        UP: '',
+        DOWN: 'b2',
+        LEFT: 'a1',
+        RIGHT: 'a3',
     },
     'a3': {
         ZONENAME: "Town Square",
-        DESCRIPTION = 'the central meeting place of the town'
-        EXAMINATION = 'examine'
-        SOLVED = False
-        UP = ''
-        DOWN = 'b3'
-        LEFT = 'a2'
-        RIGHT = 'a4'
+        DESCRIPTION: 'the central meeting place of the town',
+        EXAMINATION: 'examine',
+        SOLVED: False,
+        UP: '',
+        DOWN: 'b3',
+        LEFT: 'a2',
+        RIGHT: 'a4',
     },
     'a4': {
         ZONENAME: "Town Hall",
-        DESCRIPTION = 'government offices in here'
-        EXAMINATION = 'examine'
-        SOLVED = False
-        UP = ''
-        DOWN = 'b4'
-        LEFT = 'a3'
-        RIGHT = ''
+        DESCRIPTION: 'government offices in here',
+        EXAMINATION: 'examine',
+        SOLVED: False,
+        UP: '',
+        DOWN: 'b4',
+        LEFT: 'a3',
+        RIGHT: '',
     },
     'b1': {
         ZONENAME: "town",
-        DESCRIPTION = 'the entrance to the town'
-        EXAMINATION = 'examine'
-        SOLVED = False
-        UP = 'a1'
-        DOWN = 'c1'
-        LEFT = ''
-        RIGHT = 'b2'
+        DESCRIPTION: 'the entrance to the town',
+        EXAMINATION: 'examine',
+        SOLVED: False,
+        UP: 'a1',
+        DOWN: 'c1',
+        LEFT: '',
+        RIGHT: 'b2',
     },
     'b2': {
         ZONENAME: "Home",
-        DESCRIPTION = 'This is your home!'
-        EXAMINATION = 'Your home looks the same - nothing has changed.'
-        SOLVED = False
-        UP = 'a2'
-        DOWN = 'c2'
-        LEFT = 'b1'
-        RIGHT = 'b3'
+        DESCRIPTION: 'This is your home!',
+        EXAMINATION: 'Your home looks the same - nothing has changed.',
+        SOLVED: False,
+        UP: 'a2',
+        DOWN: 'c2',
+        LEFT: 'b1',
+        RIGHT: 'b3',
     },
     # 'b3': {
     #     ZONENAME: "",
@@ -370,7 +370,7 @@ def setup_game():
         self.mp = 60
 
     # Introduction
-    question3 = "Welcome, " + player_name + " the " + player_job".\n"
+    question3 = "Welcome, " + player_name + " the " + player_job + ".\n"
     for character in question 3:
         sys.stdout.write(character)
         sys.stdout.flush()
