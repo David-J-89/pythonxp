@@ -73,6 +73,7 @@ def help_menu():
 
 def start_game():
 
+
     ##### MAP #####
 """
 a1 a2... # PLAYER STARTS AT b2
@@ -336,14 +337,38 @@ def setup_game():
     player_name = input("> ")
     myPlayer.name = player_name
 
+    ### Job handling ###
     question2 = "Hello, what role do you want to play?\n"
+    question2added = "(You can play as a warrior, priest, or mage)\n"
     for character in question 2:
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.05)
+    for character in question2added:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.01)
     player_job = input("> ")
-    myPlayer.name = player_job
     valid_job = ['warrior', 'mage', 'priest']
+    if player_job.lower() in valid_jobs:
+        myPlayer.job = player_job
+        print("You are now a " + player_job + "!\n")
+    while player_job.lower() not in valid_jobs:
+        player_job = input("> ")
+        if player_job.lower() in valid_jobs:
+            myPlayer.job = player_job
+            print("You are now a " + player_job + "!\n")
+
+    ### Player Stats ###
+    if myPlayer.job is 'warrior':
+        self.hp = 120
+        self.mp = 20
+    elif myPlayer.job is 'mage':
+        self.hp = 40
+        self.mp = 120
+    elif myPlayer.job is 'priest':
+        self.hp = 60
+        self.mp = 60
 
 
 title_screen()
